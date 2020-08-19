@@ -1,12 +1,10 @@
 package br.com.credito.comercio.api.repositories;
 
-
-import br.com.credito.comercio.api.entities.Usuario;
+import br.com.credito.comercio.api.entities.Voucher;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;
 
-public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
-
+public interface VoucherRepository extends JpaRepository<Voucher, Integer> {
     @Transactional(readOnly = true)
-    Usuario findByEmail(String email);
+    Voucher findByEmpresaId(int empresaId);
 }
