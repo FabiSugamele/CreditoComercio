@@ -20,10 +20,15 @@ public class Voucher {
     private Usuario usuario;
     private double valor;
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public int getId(){
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Column(name = "valor", nullable = false)
@@ -31,13 +36,26 @@ public class Voucher {
         return valor;
     }
 
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
     @ManyToOne(fetch = FetchType.EAGER)
     public Empresa getEmpresa() {
         return empresa;
     }
 
+    public void
+    setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
+
     @ManyToOne(fetch = FetchType.EAGER)
     public Usuario getUsuario() {
         return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

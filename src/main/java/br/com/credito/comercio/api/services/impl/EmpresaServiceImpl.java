@@ -28,6 +28,12 @@ public class EmpresaServiceImpl implements EmpresaService {
     }
 
     @Override
+    public Empresa findById(int id) {
+        log.info("Find by id: {}", id);
+        return this.empresaRepository.findById(id);
+    }
+
+    @Override
     public Empresa save (Empresa empresa) {
         log.info("Salvando a empresa{}", empresa);
         return this.empresaRepository.save(empresa);

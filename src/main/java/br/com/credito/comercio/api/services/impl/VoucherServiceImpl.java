@@ -1,8 +1,6 @@
 package br.com.credito.comercio.api.services.impl;
 
-import br.com.credito.comercio.api.entities.Empresa;
 import br.com.credito.comercio.api.entities.Voucher;
-import br.com.credito.comercio.api.repositories.UsuarioRepository;
 import br.com.credito.comercio.api.repositories.VoucherRepository;
 import br.com.credito.comercio.api.services.VoucherService;
 

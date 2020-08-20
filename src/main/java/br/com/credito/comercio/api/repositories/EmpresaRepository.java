@@ -10,4 +10,7 @@ public interface EmpresaRepository extends JpaRepository<Empresa, Integer> {
 
     @Transactional(readOnly = true)
     Empresa findByCnpj(String cnpj);
+
+    @Transactional(readOnly = true)
+    Empresa findById(int id);
 }

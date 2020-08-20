@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "usuario")
@@ -25,9 +26,17 @@ public class Usuario {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Column(name = "nome", nullable = false)
     public String getNome() {
         return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     @Column(name = "email", nullable = false)
@@ -35,4 +44,7 @@ public class Usuario {
         return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

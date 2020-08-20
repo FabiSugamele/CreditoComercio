@@ -1,6 +1,5 @@
 package br.com.credito.comercio.api.dtos;
 
-import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.hibernate.validator.constraints.Length;
@@ -8,7 +7,6 @@ import org.hibernate.validator.constraints.Length;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
-@Data
 @ToString
 @NoArgsConstructor
 public class UsuarioDto {
@@ -28,5 +26,17 @@ public class UsuarioDto {
     @Length(min = 5, max = 200, message = "O Email deve conter de 5 a 200 caracteres")
     public String getEmail() {
         return email;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

@@ -1,9 +1,6 @@
 package br.com.credito.comercio.api.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -11,7 +8,6 @@ import javax.persistence.*;
 @Table(name = "empresa")
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @ToString
 public class Empresa {
 
@@ -33,5 +29,17 @@ public class Empresa {
     @Column(name = "cnpj", nullable = false)
     public String getCnpj() {
         return cnpj;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
     }
 }

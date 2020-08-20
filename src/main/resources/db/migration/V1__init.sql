@@ -1,18 +1,18 @@
-CREATE SCHEMA `CreditoComercio` ;
+--CREATE SCHEMA `CreditoComercio` ;
 
-CREATE TABLE `CreditoComercio`.`empresa` (
+CREATE TABLE `creditocomercio`.`empresa` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `cnpj` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`));
 
-CREATE TABLE `CreditoComercio`.`usuario` (
+CREATE TABLE `creditocomercio`.`usuario` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`));
 
-CREATE TABLE `CreditoComercio`.`voucher` (
+CREATE TABLE `creditocomercio`.`voucher` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `id_empresa` INT NULL,
   `id_usuario` INT NULL,
@@ -22,11 +22,11 @@ CREATE TABLE `CreditoComercio`.`voucher` (
   INDEX `id_usuario_idx` (`id_usuario` ASC),
   CONSTRAINT `id_empresa`
     FOREIGN KEY (`id_empresa`)
-    REFERENCES `CreditoComercio`.`empresa` (`id`)
+    REFERENCES `creditocomercio`.`empresa` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `id_usuario`
     FOREIGN KEY (`id_usuario`)
-    REFERENCES `CreditoComercio`.`usuario` (`id`)
+    REFERENCES `creditocomercio`.`usuario` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);

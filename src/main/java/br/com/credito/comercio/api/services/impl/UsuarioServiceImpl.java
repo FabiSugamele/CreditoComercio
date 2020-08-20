@@ -29,4 +29,10 @@ public class UsuarioServiceImpl implements UsuarioService {
         log.info("Find by email: {}", email);
         return Optional.ofNullable(this.usuarioRepository.findByEmail(email));
     }
+
+    @Override
+    public Usuario findById(int id) {
+        log.info("Find by id: {}", id);
+        return this.usuarioRepository.findById(id);
+    }
 }
